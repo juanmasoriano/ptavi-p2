@@ -11,7 +11,7 @@ if __name__ == "__main__":
         for num in reader:
 
             if num[0] == "suma":
-                resultado = int(num[1]
+                resultado = int(num[1])
                 if num[-1] == "":
                     for i in num[2:-1]:
                         resultado = resultado + int(i)
