@@ -2,6 +2,7 @@
 
 import sys
 
+
 from calc import CalculadoraHija
 
 c = CalculadoraHija()
@@ -25,5 +26,6 @@ if __name__ == "__main__":
             c.division(op1,op2)
         except ZeroDivisionError:
             sys.exit("Division by zero is not allowed")
+
     else:
         sys.exit('Operación sólo puede ser sumar, restar, multiplicar o dividir.')

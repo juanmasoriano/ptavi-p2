@@ -2,13 +2,10 @@
 
 import sys
 
-from calc import CalculadoraHija
-
-c = CalculadoraHija()
 
 if __name__ == "__main__":
     fichero = open("Fichero.txt","w")
-    fichero.write("suma,2,20,10,4,\nresta,15,10,5,\nmultiplica,1,1,5,\ndivide,80,2,0,1")
+    fichero.write("suma,2,20,10,4,\nresta,15,10,5,\nmultiplica,1,1,5,3,2,\ndivide,80,2,0,1")
     fichero.close()
 
     fichero = open("Fichero.txt","r")
@@ -39,5 +36,6 @@ if __name__ == "__main__":
                 print(resultado)
             except ZeroDivisionError:
                 sys.exit("Division by zero is not allowed")
+
         else:
             sys.exit('Operación sólo puede ser sumar, restar, multiplicar o dividir.')
