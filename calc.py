@@ -12,16 +12,28 @@ class Calculadora:
     def minus(self, op1, op2):
         """ Function to substract the operands """
         print(op1 - op2)
+
+class CalculadoraHija(Calculadora):
+
+    def multiplicacion(self,op1,op2):
+        print(op1 * op2)
+
+    def division(self,op1,op2):
+        print(op1 / op2)
+
 if __name__ == "__main__":
+    
+    c = Calculadora()
+    
     try:
-        operando1 = int(sys.argv[1])
-        operando2 = int(sys.argv[3])
+        op1 = int(sys.argv[1])
+        op2 = int(sys.argv[3])
     except ValueError:
         sys.exit("Error: Non numerical parameters")
 
     if sys.argv[2] == "suma":
-        result = plus(operando1, operando2)
+        c.plus(op1, op2)
     elif sys.argv[2] == "resta":
-        result = minus(operando1, operando2)
+        c.minus(op1, op2)
     else:
         sys.exit('Operación sólo puede ser sumar o restar.')
